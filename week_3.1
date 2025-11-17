@@ -6,8 +6,7 @@ const app = express();
 const schema = zod.object({
     email: zod.string().email(),
     password: zod.string().min(8),
-    country: zod.literal("IN").or(zod.literal("U
-                                              S")),
+    country: zod.literal("IN").or(zod.literal("US")),
     kidneys: zod.array(zod.number()),
 })
 
